@@ -1,0 +1,64 @@
+/* ----- MontSerrat FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color1: #FFF;
+    --color2-icons: #22a0f5;
+    --color3-gradiente: linear-gradient(to bottom, #193867, #215789, #2a79ab, #379ccb, #4ac0e9);
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Background Gradient */
+    background-image: linear-gradient(to bottom, #193867, #215789, #2a79ab, #379ccb, #4ac0e9);
+}
+
+.button {
+    padding: 60px 100px;
+    background-color: #282828;
+    color: #6d6d6d;
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.button span {
+    font-size: 30px;
+    position: relative;
+    z-index: 999999;
+}
+
+.button::before {
+    content: '';
+    background-color: var(--color2-icons);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: var(--eixoY);
+    left: var(--eixoX);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: width .6s, height .6s;
+}
+
+.button:hover {
+    color: #ffffff;
+}
+
+.button:hover::before {
+    width: 1000px;
+    height: 1000px;
+}
